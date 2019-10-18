@@ -10,7 +10,7 @@
 
   Decision tree is a way to do the classification. It works just like human being. For example, when you want to know whether a computer is a good computer, you may first look at the RAM of this computer and then the CPU and then the GPU and so on. If we represent this process with a tree, we may do like this:
 
-<img src=" https://github.com/NULLPtr-cmd/Markdown-Pictures/blob/master/ML/DTexample.png?raw=true" alt="An example" style="zoom:67%;" />
+<img src=" DTexample.png" alt="An example" style="zoom:67%;" />
 
   First, we check the RAM of this computer, if it doesn't have large RAM, we think this computer isn't a good computer. If it has large RAM, we continue to check the CPU and so on.
 
