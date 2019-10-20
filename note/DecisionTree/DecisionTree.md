@@ -19,7 +19,7 @@ Author: Zhang Xiaozheng Date: 2019/10/20
   So, if we can generate a tree like this from a data set, we can let the machine do the classification job based on this tree just like us. This is the basic idea of the decision tree.
 
 ## How to create a decision tree
-<<<<<<< HEAD
+
   When we want to create a decision tree, the first thing we need to think is how to choose the feature on each node. To solve this question, we need to know information entropy and information gain.
 
 - Information entropy
@@ -56,6 +56,5 @@ So we can choose the feature which makes the information gain largest to split t
 But there is some problem with the ***ID3*** algorithm. For example, if we use the ID number of people in a training data as a feature, because everyone has a different ID number, the information gain of this feature will be very large, but the ID number may has nothing to do with the answer. To solve this problem, we can use the gain ratio to split the set ***D*** .
 
 - Gain ratio
-=======
   When we want to create a decision tree, the first thing we need to think about is how to choose the feature on each node. To solve this question, we need to know the entropy of information.
->>>>>>> fb2b25d6831984ab563e54f7b26c63e7335cd7fa
+
