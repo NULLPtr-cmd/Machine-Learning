@@ -19,7 +19,7 @@ Author: Zhang Xiaozheng Date: 2019/10/20
   So, if we can generate a tree like this from a data set, we can let the machine do the classification job based on this tree just like us. This is the basic idea of the decision tree.
 
 ## How to create a decision tree
-<<<<<<< HEAD
+
   When we want to create a decision tree, the first thing we need to think is how to choose the feature on each node. To solve this question, we need to know information entropy and information gain.
 
 - Information entropy
@@ -56,6 +56,18 @@ So we can choose the feature which makes the information gain largest to split t
 But there is some problem with the ***ID3*** algorithm. For example, if we use the ID number of people in a training data as a feature, because everyone has a different ID number, the information gain of this feature will be very large, but the ID number may has nothing to do with the answer. To solve this problem, we can use the gain ratio to split the set ***D*** .
 
 - Gain ratio
-=======
-  When we want to create a decision tree, the first thing we need to think about is how to choose the feature on each node. To solve this question, we need to know the entropy of information.
->>>>>>> fb2b25d6831984ab563e54f7b26c63e7335cd7fa
+  $$
+  GainRatio(D,a)=\frac{Gain(D,a)}{IV(a)}
+  $$
+  where
+  $$
+  IV(a)=-\sum_{v=1}^{V}\frac{|D^v|}{|D|}log_2\frac{|D^v|}{|D|}
+  $$
+  It's the intrinsic  value of a. The more classes feature ***a***  has, the bigger its intrinsic value is. So this can let the feature which has many classes have a little information gain.
+  
+
+But the gain ratio is more likely to choose those features who have little classes. So, in practice, we usually first choose those features whose information gain is larger than the average, then we choose the largest gain ratio in these features. This is the ***C4.5*** algorithm.
+
+## Question
+
+The Decision Tree algorithm can be easily affect by the training data, why?
