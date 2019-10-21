@@ -1,6 +1,6 @@
 # Ensemble Learning
 
-Autor: Zhang Xiaozheng Data:2019/10/20
+Author: Zhang Xiaozheng Data:2019/10/20
 
 When a teacher draw a question on the class, you solve it and write down your answer, which may be right or wrong. But what if let all your classmates to vote and then get the final answer? Intuitively, this answer is more likely to be the correct answer. 
 
