@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import DT
 import random
 from math import log
 
