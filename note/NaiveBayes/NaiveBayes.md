@@ -38,5 +38,19 @@ As this data has been observed by us, so we can say that the probability of this
 
 So after use MLE, for a data set *D*,we can have:
 $$
-
+P(y=c_k)=\frac{|D_k|}{|D|}\ \ where\ |D_k|\ is\ the\ number\ of\ y\ whose\ label\ is\ c_k\\
+P(x_i|c_k)=\frac{|D_{ik}|}{|D_k|}\ \ where\ |D_{ik}|\ is\ the\ number\ of\ x\ whose\ label\ is\ c_k\ and\ whose\ feature\ is\ x_i
 $$
+
+Because *P(x)* has nothing to do with *c*, so we just need to maximize *P(c) P(x|c)* so that we can maximize *P(c|x)* too.
+
+## Problem
+
+What if there is no such *x* whose feature is *xi* and whose label is *ck*? In this case, the *P(x|c)=0*, no matter what other features are, the *P(c|x)* will always equal to 0 which not make sense. So we use  "Laplace smooth" for our formula:
+$$
+P(y=c_k)=\frac{|D_k|+1}{|D|+N}\\
+P(x_i|c_k)=\frac{|D_{ik}|+1}{|D_k|+N_i}
+$$
+where *N* is the number of all the possible classes of *y*, *Ni* is the number of all the possible classes of feature *x*.
+
+In this way, it is impossible that *P(x|c)=0*.
