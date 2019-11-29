@@ -32,5 +32,7 @@ min_G\ max_D V(G,D)=E_{x\sim p_{data}}[log(D(x))]+E_{z\sim p_z}[log(1-D(G(z)))]
 $$
 It just like G and D are playing minimax game.
 
-First, let's maximize this function with D.
+The prove is in another PDF.
+
+
 
